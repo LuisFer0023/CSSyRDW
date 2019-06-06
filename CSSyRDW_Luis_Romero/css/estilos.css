@@ -1,0 +1,283 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Dancing Script', cursive;
+}
+
+body{
+  background-color: #02010A;
+}
+
+.contenido{
+	text-align: center;
+	width: 100%;
+  display: flex;
+	flex-direction: column;
+}
+
+/* HEADER :) */
+.header {
+	background:#5b7989;
+	border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+/*Titulo*/
+#titulo{
+	color:white;
+	text-shadow: 2px 2px #02010A;
+	vertical-align: center;
+	width: 75%;
+	height: 10vh;
+	margin-top: 2vh;
+	margin-left: 2vh;
+	display: inline-flex;
+	text-align: left;
+}
+
+/*Menu*/
+#menu-principal{
+	float: right;
+	width: 275px;
+	height: 50px;
+	margin-top: 2vh;
+	margin-right: 2vw;
+	display:inline-flex;
+}
+
+#menu-principal a{
+	width: 33.3%;
+	color: white;
+	vertical-align: bottom;
+	padding-top: 10px;
+	text-decoration: underline;
+}
+
+#menu-principal a[href="#"]{
+	text-decoration: none;
+}
+
+/*Imagen central*/
+.imagen-central{
+	background-color: #82C3A6;
+	width: 100%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.imagen-central figure{
+	width:80%;
+	margin:0 auto;
+}
+
+.imagen-central img{
+	box-shadow: 2px 2px #02010A;
+	width: 100%;
+	margin:20px auto;
+}
+
+/*Imagen Secundarias*/
+.imagen-secundaria{
+	background-color: #D5C75F;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 100%;
+}
+
+.imagen-secundaria figure{
+	margin:2vh auto;
+	text-align: center;
+}
+
+.imagen-secundaria figure img{
+	margin:2vh auto;
+}
+
+#imagen-secundaria1 img{
+	box-shadow: 2px 2px #02010A;
+}
+
+#imagen-secundaria1 img:hover{
+	transform: rotate(10deg);
+	transition-duration: 1s;
+	border: 2px solid #82C3A6;
+	box-shadow: 2px 2px #82C3A6;
+ }
+
+ #imagen-secundaria2 img{
+	 box-shadow: 2px 2px #02010A;
+ }
+
+ #imagen-secundaria2 img:hover{
+	 transform: translate(20px, -5px);
+	 transition-duration: 1s;
+	 border: 2px solid #82C3A6;
+	 box-shadow: 2px 2px #82c3a6;
+ }
+
+ /*PIE DE PAGINA :P */
+
+ .pie-pagina{
+ 	display: flex;
+ 	flex-direction: row;
+ 	flex-wrap: nowrap;
+ 	width: 100%;
+ 	background:#c6d5c5;
+ 	border-radius: 0 0 10px 10px;
+ 	-webkit-border-radius: 0 0 10px 10px;
+ 	-moz-border-radius: 0 0 10px 10px;
+
+ }
+ .pie-pagina div{
+ 	width: 25%;
+ 	padding: 4vh;
+ 	line-height: 1em;
+ }
+
+ .pie-pagina img{
+ 	vertical-align: middle;
+ 	width:25px;
+ 	margin-right: 10px;
+ }
+
+ .pie-pagina p{
+ 	width: 80%;
+ 	height: 80%;
+ 	margin:auto;
+ 	text-align: left;
+ }
+
+ #terminos p, #redes-sociales p, #derechos p{
+ 	text-align: center; !important;
+ }
+
+ .galeria{
+ 	display:flex;
+ 	flex-direction: row;
+ 	flex-wrap: wrap;
+ 	width: 100%;
+ 	background:#D5C75F;
+ }
+
+ .galeria figure{
+ 	width: 33.3%;
+ }
+
+ .galeria img{
+ 	width:80%;
+ 	margin: 10%;
+ }
+
+ #imagen1{
+ 	filter: blur(10px);
+ 	-moz-filter: blur(10px);
+ 	-webkit-filter: blur(10px);
+ }
+
+ #imagen2, #imagen4, #imagen6{
+ 	filter: grayscale(100%);
+ 	-webkit-filter: grayscale(100%);
+ 	-moz-filter: grayscale(100%);
+ }
+
+ #imagen3{
+ 	filter: sepia(90%);
+ 	-webkit-filter: sepia(90%);
+ 	-moz-filter:sepia(90%);
+ }
+
+
+ /* Media Queries */
+
+ @media (min-width: 900px) {
+ /*Version Desktop*/
+
+ 	.contenido{
+ 		width: 100%;
+ 		margin: 0 auto;
+ 		animation: slidein 1s;
+ 	}
+
+ 	.imagen-secundaria figure{
+ 		width:50%;
+ 		margin:20px auto;
+ 	}
+
+ 	.imagen-secundaria figure img{
+ 		width:80%;
+ 	}
+ }
+
+ @media (max-width: 899px) {
+ 	/*version mobile*/
+ 	.contenido{
+ 		animation: slidein 1s;
+ 	}
+
+ 	.header{
+ 		flex-wrap: wrap;
+ 	}
+
+ 	#titulo{
+ 		display: block;
+ 		text-align: center;
+ 		margin:2vh auto;
+ 	}
+
+ 	#menu-princial{
+ 		margin: 1vh auto;
+ 		text-align: center;
+ 		text-indent: 2em;
+ 	}
+
+ 	.imagen-secundaria{
+ 		flex-wrap: wrap;
+ 	}
+
+ 	.imagen-secundaria figure{
+ 		width: 100%;
+ 		margin: 20px auto;
+ 	}
+
+ 	.imagen-secundaria figure img{
+ 		width:80%;
+ 	}
+
+ 	.pie-pagina{
+ 		flex-wrap: wrap;
+ 	}
+
+ 	.pie-pagina div{
+ 		width:100%;
+ 	}
+
+ 	.pie-pagina div *{
+ 		text-align: center;
+ 	}
+
+ 	.galeria figure{
+ 		width:100%;
+ 	}
+ }
+
+
+ /*KEYFRAME*/
+
+ @-webkit-keyframes slidein{
+ 	0%{
+ 		margin-top: 150%;
+ 	}
+
+ 	60%{
+ 		margin-top:-5%;
+ 	}
+
+ 	100%{
+ 		margin-top: 0%;
+ 	}
+ }
